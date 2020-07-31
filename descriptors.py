@@ -22,3 +22,7 @@ def shingle(array):
 # sentence
 def sentence(windowed_text):
     return "text-fingerprinting.descriptor.sentence#%s" % windowed_text
+
+
+def text_from_sentence_descriptor(sentence_descriptor):
+    return text_from_descriptor(sentence_descriptor)

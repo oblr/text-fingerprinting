@@ -8,11 +8,29 @@ class Test(unittest.TestCase):
 
     def setUp(self):
         self.h1 = EXAMPLE_TEXT_1
-        # self.h1 = EXAMPLE_TEXT_2
+        self.h2 = EXAMPLE_TEXT_2
 
-    def test_result(self):
-        w = windowing.sentences(
+        self.w1 = windowing.sentences(
             text_as_descriptor(self.h1)
         )
-        print(w)
-        self.assertEqual(w, "...")
+        self.w2 = windowing.sentences(
+            text_as_descriptor(self.h2)
+        )
+    def test_result(self):
+        w = self.w1
+        self.assertEqual(
+            w[0],
+            'text-fingerprinting.descriptor.sentence#Lorem ipsum dolor sit amet, consectetur adipiscing elit')
+        self.assertEqual(
+            w[1],
+            'text-fingerprinting.descriptor.sentence#Sed eget egestas purus')
+
+    def test_result_2(self):
+        w = self.w2
+        self.assertEqual(
+            w[0],
+            'text-fingerprinting.descriptor.sentence#Lorem ipsum dolor sit amet, consectetur adipiscing elit')
+        self.assertEqual(
+            w[1],
+            'text-fingerprinting.descriptor.sentence#Sed eget egestas purus')
+
