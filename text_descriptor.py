@@ -10,4 +10,5 @@ def text_from_descriptor(descriptor):
 
 # shingle
 def shingle(array):
-    return "text-fingerprinting.descriptor.shingle#%s" % "//".join(a.__str__() for a in array)
+    return "text-fingerprinting.descriptor.shingle#%s" % " " \
+                                                         "".join(a.__str__() for a in array)
