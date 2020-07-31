@@ -1,7 +1,7 @@
 from itertools import product
 
 # shingle descriptor: "text-fingerprinting"
-from text_descriptor import shingle
+from descriptors import shingle
 
 
 def shingles_from_text(text, k):

@@ -2,7 +2,7 @@ import unittest
 
 from shingles.find import shingles_from_text
 from simple import md5, md5_file
-from text_descriptor import text_as_descriptor, text_from_descriptor
+from descriptors import text_as_descriptor, text_from_descriptor
 
 
 class Test(unittest.TestCase):
